@@ -1,18 +1,19 @@
+'use strict';
 // Creëer een object ‘myBicycle‘ met 3 properties:
 // speed met waarde 30,
 // gear met waarde 1 en
 // frameMaterial met waarde  "carbon fiber".
 const myBicycle = {
-	speed: 30,
-	gear: 1,
-	frameMaterial: 'carbon fibre'
+  speed: 30,
+  gear: 1,
+  frameMaterial: 'carbon fibre',
 };
 
 // Overloop alle properties, verzamel de key/value pairs in een string
 // en alert de string.
 let result = '';
 for (const key in myBicycle) {
-	result += key + ': ' + myBicycle[key] + '\n';
+  result += key + ': ' + myBicycle[key] + '\n';
 }
 alert(result);
 
@@ -28,8 +29,8 @@ myBicycle.speed += 6;
 // Creëer een object gearDescription met de volgende eigenschappen
 // make: "Sram", nrOfGears = 24
 let gearDescription = {
-	make: 'Sram',
-	nrOfGears: 24
+  make: 'Sram',
+  nrOfGears: 24,
 };
 
 // Voeg een property gears toe aan myBicycle
@@ -62,5 +63,8 @@ console.log(`speed: ${speed} \ncolor: ${color} \nframe: ${frame}`);
 // en extras (dit moet een array met alle extra's bevatten) te maken.
 // Log de verkregen waarden van gearMake en alle extra's (als een opsomming van strings, gescheiden door een ,)
 // naar de console
-const { gears: { make: gearMake }, extras: [...extras] } = myBicycle;
+const {
+  gears: { make: gearMake },
+  extras: [...extras],
+} = myBicycle;
 console.log(`gearMake: ${gearMake} \nextras: ${extras.join(', ')}`);
