@@ -46,5 +46,5 @@ console.log(
   }have the same color`
 );
 
-redBikes = getBikesWithColor('red', aRedBicycle, aGreenBicycle);
+const redBikes = getBikesWithColor('red', aRedBicycle, aGreenBicycle);
 console.log(redBikes);
