@@ -3,7 +3,7 @@
 const myBicycle = {
   speed: 30,
   gear: 1,
-  frameMaterial: 'carbon fibre',
+  frameMaterial: 'carbon fibre'
 };
 
 // Voeg een methode accelerate toe aan myBicycle
@@ -27,9 +27,11 @@ console.log('Accelerated to ' + myBicycle.speed + 'km/h');
 // speed [20..40[ 'Pushing...'
 // speed [40..60[ 'Peleton style...'
 // speed >= 60 'Sagan style...
-// Stel de speed van myBicycle in op 10
-// Test je methode door een in een lusje de speed in stapjes van 10% (accelerate)
-// van tot 100 te gaan en telkens de geretourneerde string te loggen.
+//
+// Stel de speed van myBicycle in op 5
+// Test nu bovenstaande methode door een in een lusje de speed in stapjes van 10%
+// te verhogen (via de methode accelerate) en telkens de geretourneerde string te loggen.
+// De iteratie stopt wanneer de speed van myBicycle hoger dan 100 is.
 
 myBicycle.judgeSpeed = function () {
   switch (true) {
@@ -46,8 +48,8 @@ myBicycle.judgeSpeed = function () {
   }
 };
 
-myBicycle.speed = 10;
-for (let index = 0; index < 100; index += 5) {
+myBicycle.speed = 5;
+while (myBicycle.speed < 100) {
   myBicycle.accelerate(10);
   console.log(myBicycle.judgeSpeed());
 }
