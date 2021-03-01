@@ -26,12 +26,12 @@ const letterwaarden = {
   w: 5,
   x: 8,
   y: 8,
-  z: 4,
+  z: 4
 };
 
 function berekenPunten(woord) {
   let punten = 0;
-  for (let i = 0; i < woord.length; i++) punten += letterwaarden[woord[i]];
+  for (const letter of woord) punten += letterwaarden[letter];
   return punten;
 }
 

@@ -4,7 +4,7 @@ const dice1 = {
   eyes: 1,
   roll: function () {
     this.eyes = Math.floor(Math.random() * 6 + 1);
-  },
+  }
 };
 
 const dice2 = {};
@@ -17,12 +17,12 @@ const craps = {
   earned: 0, //gewonnen
   dices: [dice1, dice2],
   rollDice: function () {
-    for (let i = 0; i <= this.dices.length - 1; i++) this.dices[i].roll();
+    for (const dice of this.dices) dice.roll();
   },
   getSum: function () {
     let sum = 0;
-    for (let i = 0; i <= this.dices.length - 1; i++) {
-      sum += this.dices[i].eyes;
+    for (const dice of this.dices) {
+      sum += dice.eyes;
     }
     return sum;
   },
@@ -45,7 +45,7 @@ const craps = {
         }
       }
     }
-  },
+  }
 };
 
 function play() {
